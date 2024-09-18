@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,20 +8,27 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
+
+    
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+
+      headerBackgroundColor={{ light: '#1d1638', dark: '#1d1638' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/pickpocket.png')}
           style={styles.reactLogo}
+
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">Bem vindo ao PickPocket</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+      <ThemedText type="defaultSemiBold">
+Nosso app foi criado para ajudar você a se sentir mais segura ao caminhar pelas ruas da cidade. Através dele, você poderá consultar, em tempo real, as áreas de risco ao seu redor, baseadas em relatos de outros usuários e em dados oficiais de boletins de ocorrência da polícia.
+Ao acessar o app, você verá um mapa da sua cidade com cores que indicam o nível de risco de cada região. A classificação vai de 1 a 5, sendo 1 para áreas de baixo risco e 5 para áreas de maior perigo. Essa informação é atualizada constantemente, graças às denúncias anônimas feitas pelos usuários e aos dados da polícia.
+        </ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
           Press{' '}
