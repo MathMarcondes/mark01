@@ -55,13 +55,7 @@ export default function HomeScreen() {
         />
       </ThemedView>
 
-      <ThemedView style={styles.stepContainer}>
-        {/* Aqui será o botão para entrar na conta */}
-        <ThemedText>
-          {/* Campo para recuperar senha */}
-          Esta deverá ser resetada através de uma codificação onde será blindado para qualquer um e enviado direto ao endereço do usuário.
-        </ThemedText>
-      </ThemedView>
+     
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Passo 2: Insira o destino que deseja visualizar</ThemedText>
