@@ -31,7 +31,8 @@ export default function HomeScreen() {
           placeholder="Cpf"
           value={cpf}
           onChangeText={setCPF}
-          secureTextEntry
+          keyboardType='numeric'
+          maxLength={11} 
         />
 
         {/* TextInput para o email */}
