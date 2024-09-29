@@ -5,6 +5,9 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 export default function HomeScreen() {
   return (
@@ -42,6 +45,11 @@ export default function HomeScreen() {
         </ThemedText>
 
       </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        
+      </ThemedView>
+
       <StatusBar style="light" /> 
       
     </ParallaxScrollView>

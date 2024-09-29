@@ -28,7 +28,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
       <TextInput
           style={styles.input}
-          placeholder="Cpf"
+          placeholder="cpf"
           value={cpf}
           onChangeText={setCPF}
           keyboardType='numeric'
