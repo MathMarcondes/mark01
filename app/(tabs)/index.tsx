@@ -1,12 +1,16 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Alert, ImageBackground } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native';
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Pressable, Text } from 'react-native';
+import { Link } from 'expo-router';
+import { Button } from 'react-native';
+
+
 
 
 export default function HomeScreen() {
@@ -17,14 +21,22 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#1d1638', dark: '#1d1638' }}
       headerImage={
         <Image
-          source={require('@/assets/images/pickpocket.png')}
+          source={require('@/assets/images/logo02.png')}
           style={styles.reactLogo}
         />
-      }>
+      }
+      ImageBackground={
+      <Image
+        source={require('@/assets/images/logo02.png')}
+        style={styles.stepContainer}
+      />
+      }
+      
+      >
       
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem vindo ao PickPocket</ThemedText>
-        <HelloWave />
+
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="defaultSemiBold">
@@ -47,9 +59,17 @@ export default function HomeScreen() {
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
-        
+        <Button
+        title="Cadastro"  
+        onPress={() => console.log('tela de cadastro')}
+        />
       </ThemedView>
-
+      <ThemedView style={styles.stepContainer}>
+        <Button
+        title="something"
+        onPress={() => Alert.alert('somenthing')}
+        />
+      </ThemedView>
       <StatusBar style="light" /> 
       
     </ParallaxScrollView>

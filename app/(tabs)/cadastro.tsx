@@ -5,6 +5,8 @@ import { SafeAreaView } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Button } from 'react-native';
+import { Alert } from 'react-native';
 
 export default function HomeScreen() {
   const [cpf, setCPF] = useState('');
@@ -16,7 +18,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#1d1638', dark: '#1d1638' }}
       headerImage={
         <Image
-          source={require('@/assets/images/pickpocket.png')}
+          source={require('@/assets/images/logo02.png')}
           style={styles.reactLogo}
         />
       }
@@ -52,6 +54,11 @@ export default function HomeScreen() {
           value={password}
           onChangeText={setPassword}
           secureTextEntry
+        />
+
+        <Button
+        title="Cadastrar-se"
+        onPress={() => console.log('Cadastro realizado com sucesso')}
         />
       </ThemedView>
 
@@ -94,4 +101,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderRadius: 4,
   },
+  Button: {
+    
+  }
 });

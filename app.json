@@ -4,27 +4,26 @@
     "slug": "mark01",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/pickpocket.png",
+    "icon": "./assets/images/logo01.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/pickpocket.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#1d1638"
+      "image": "./assets/images/logo03.png",
+      "resizeMode": "contain"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/pickpocket.png",
+        "foregroundImage": "./assets/images/logo03.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/pickpocket.png"
+      "favicon": "./assets/images/logo03.png"
     },
     "plugins": [
       "expo-router"
